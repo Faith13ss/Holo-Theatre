@@ -2,7 +2,7 @@
     display: flex;
     /* Самая неадаптивная хуйня на свете. */
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
 }
 .welcome {
     margin-bottom: 1em;
@@ -14,11 +14,34 @@
     margin-bottom: 2.5em;
     text-decoration: none;
     color: inherit;
+    margin-right: 16px;
+    border: 1px solid #DDD;
+
 }
 .performance-title {
     font-size: 1.5em;
+    transition: .5s;
+}
+.performance-text {
+    padding: 5px;
+    line-height: 48px;
 }
 .performance-preview {
     width: 300px;
+    height: 150px;
     margin-bottom: .5em;
+    transition: 0.5s;
+    color: rgba(255, 255, 255, 0);
+    padding: 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background-size: cover;
+}
+.performance:hover .performance-preview {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, .7);
+}
+.performance:hover .performance-title {
+    font-size: 2em;
 }

@@ -15,8 +15,13 @@
         <div class="performances">
             <% for(const [id, performance] of Object.entries(performances)) { %>
                 <a class="performance" href="watch/<%=id %>">
-                    <img src="<%=performance.preview %>" alt="" class="performance-preview">
-                    <span class="performance-title"><%=performance.name %></span>
+                    <div class="performance-preview" style="background-image: url('<%=performance.preview;%>')">
+                        <%-performance.description %>
+                    </div>
+                    <!-- <img src="<%=performance.preview %>" alt="" class="performance-preview"></img> -->
+                    <div class="performance-text">
+                        <span class="performance-title"><%=performance.name %></span>
+                    </div>
                 </a>
             <% }; %>
         </div>

@@ -15,7 +15,6 @@ h1 {
     height: 120px;
     width: 200px;
     object-fit: cover;
-    border-radius: 16px;
     transition: .8s;
     margin-bottom: 8px;
 }
@@ -29,7 +28,6 @@ h1 {
     width: 720px;
     height: 480px;
     object-fit: cover;
-    border-radius: 16px;
     margin-right: 8px;
 }
 
