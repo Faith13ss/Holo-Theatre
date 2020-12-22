@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <%- include("base.ejs"); %>
+    
+    <link rel="stylesheet" href="styles/performances.css">
+</head>
+<body>
+
+    <%- include("content-header.ejs", {selected: 'performances'}); %>
+
+        <h1 class="welcome">Оперы, которые пройдут в скором времени:</h1>
+        <div class="performances">
+            <% for(const [id, performance] of Object.entries(performances)) { %>
+                <a class="performance" href="watch/<%=id %>">
+                    <img src="<%=performance.preview %>" alt="" class="performance-preview">
+                    <span class="performance-title"><%=performance.name %></span>
+                </a>
+            <% }; %>
+        </div>
+    <%- include("content-footer.ejs"); %>
+
+</body>
+</html>

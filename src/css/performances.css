@@ -1,0 +1,24 @@
+.performances {
+    display: flex;
+    /* Самая неадаптивная хуйня на свете. */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.welcome {
+    margin-bottom: 1em;
+}
+
+.performance {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5em;
+    text-decoration: none;
+    color: inherit;
+}
+.performance-title {
+    font-size: 1.5em;
+}
+.performance-preview {
+    width: 300px;
+    margin-bottom: .5em;
+}

@@ -1,0 +1,146 @@
+/* Убираем стандартную залупу чтобы не мазолила глаза. */
+
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* Возможно надо поменять этот ебучий шрифт, мне в принципе похуй. */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #222;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+}
+
+/* Нави, ебать его в рот, гация. */
+
+.content {
+    height: 100%;
+    display: flex;
+}
+
+.nav {
+    background-color: #a8323c;
+    color: white;
+    display: flex;
+    font-size: 1.5em;
+}
+.nav-container {
+    margin: auto;
+    width: 960px;
+    display: flex;
+}
+
+.nav-header {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.nav-link {
+    font-weight: 600;
+    padding: .9em .5em;
+}
+
+/* Меню слева и связанная с ним хуета. */
+
+.tab-menu {
+    min-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #DDD;
+    height: 100%;
+}
+.tab-link {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    text-decoration: none;
+    color: #333;
+    background-clip: border-box;
+    border-bottom: 1px solid #AAA;
+    background-color: #DDD;
+
+    text-transform: uppercase;
+}
+.selected::before {
+    border-bottom: none;
+}
+.tab-link.selected {
+    background-color: #FFF;
+}
+
+.tab-content {
+    padding: 3em;
+}
+
+/* Авторизация. */
+
+.login {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.login-title {
+    margin-bottom: .5em;
+    border: 0;
+}
+.login-input {
+    margin-bottom: .5em;
+    font-size: 1.5em;
+    border: 1px solid #444;
+    border-bottom: 3px solid #a8323c;
+    transition: .5s;
+}
+.login-input:focus {
+    color: white;
+    background-color: #a8323c;
+    outline: none;
+}
+.login-submit {
+
+}
+
+/* Это профиль чела слева. */
+.user {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 300px;
+    flex-direction: column;
+
+    border-bottom: 1px solid #AAA;
+}
+.user-icon {
+    max-width: 140px;
+    border-radius: 50%;
+    border: 5px solid #AAA;
+}
+
+
+/* Кнопочки. */
+
+.button {
+    background-color: #a8323c;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: .3em .7em;
+
+    font-size: 1.5em;
+}

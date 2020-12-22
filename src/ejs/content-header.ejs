@@ -1,0 +1,28 @@
+<div class="nav">
+    <div class="nav-container">
+        <h3 class="nav-header">Holo-Theatre</h3>
+
+        <a href="profile" class="nav-link selected"></a> 
+    </div>
+</div>
+<div class="content">
+    <div class="tab-menu">
+        <div class="user">
+            <% if (logged) { %>
+                <img src="<%=user.avatar %>" alt="" class="user-icon">
+                <h3 class="user-name"><%=user.fullName %></h3>
+                <p class="user-balance">Ваш баланс: <%=user.balance %>р.</p>
+            <% } else { %>
+                <form class="login" action="login" method="post">
+                    <h2 class="login-title">Вход в аккаунт:</h2>
+                    <input class="login-input" type="text" name="login" placeholder="Логин...">
+                    <input class="login-input" type="password" name="password" placeholder="Пароль...">
+                    <input class="login-submit" type="submit" value="Войти">
+                </form>
+            <% } %>
+        </div>
+        <a class="tab-link <%= (selected == 'performances') ? 'selected': null %>" href="/performances">Новые оперы</a>
+        <a class="tab-link <%= (selected == 'recordings') ? 'selected' : null %>" href="/recordings">Записи</a>
+        <a class="tab-link <%= (selected == 'profile') ? 'selected' : null %>" href="/profile">Профиль</a>
+    </div>
+    <div class="tab-content">

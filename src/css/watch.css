@@ -1,0 +1,49 @@
+h1 {
+    margin-bottom: .5em !important;
+}
+
+/* Галерея картинок с приколами. */
+.gallery {
+    display: flex;
+    margin-bottom: 16px;
+}
+.gallery-images {
+    display: flex;
+    flex-flow: column;
+}
+.gallery-image {
+    height: 120px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: .8s;
+    margin-bottom: 8px;
+}
+.gallery-image.selected {
+    filter: brightness(25%);
+}
+.gallery-image:hover {
+    cursor: pointer;
+}
+.gallery-preview {
+    width: 720px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-right: 8px;
+}
+
+
+.description {
+    max-width: 720px;
+    margin-bottom: 2em;
+}
+
+.button-buy.disabled {
+    background-color: #333;
+}
+
+
+.player {
+
+}
