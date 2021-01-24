@@ -9,7 +9,10 @@
 </head>
 <body>
     <%- include("content-header.ejs", { selected: 'profile' }); %>
+        <% if (user.isTheatre) { %>
         <h1>Настройки профиля</h1>
+        <% } else { %>
+        <% } %>
     <%- include("content-footer.ejs") %>
 </body>
 </html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <%- include("base.ejs") %>
+
+    <link rel="stylesheet" href="styles/profile.css">
+</head>
+<body>
+    <%- include("content-header.ejs", { selected: 'theatre' }); %>
+        <h1>Меню театра</h1>
+        <hr>
+        <a href="/craete-recording" class="button buy-button large-button">Добавить запись представления</a>
+        <a href="/create-user" class="button buy-button large-button">Создать пользователя</a>
+    <%- include("content-footer.ejs") %>
+</body>
+</html>

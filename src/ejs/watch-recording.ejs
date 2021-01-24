@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <%- include("base.ejs"); %>
+    <link rel="stylesheet" href="/styles/watch-recording.css">
+</head>
+<body> 
+    <%- include("content-header.ejs", { selected: 'watch' }); %>
+        <hr>
+        <div class="container">
+            <div class="video">
+                <% if (user.hasTicket(id)) { %>
+                    <h2>У вас куплен билет на эту оперу!</h2>
+                    <video class="player" src="http://myserver.com:1935/path/to/stream/myPlaylist.m3u8">
+                        Your browser does not support the VIDEO tag and/or RTP streams.
+                    </video>
+                <% } else { %>
+                    <div class="gallery">
+                        <img src="<%=recording.gallery[0] %>" class="gallery-preview">
+                        <div class="gallery-images">
+                            <img src="<%=recording.gallery[0] %>" alt="" class="gallery-image selected">
+                            <% for (let i = 1; i < recording.gallery.length; i++) { %>
+                                <img src="<%=recording.gallery[i] %>" alt="" class="gallery-image">
+                            <% } %>
+                        </div>
+                    </div>
+                    <h3>Опера <%=recording.name %></h3>
+                    <p class="description">
+                        <%-recording.description %>
+                    </p>
+                    <a href="/buy-recording/<%=id %>" class="button buy-button">Купить</a>
+                <% } %>
+            </div>
+            <div class="theatre">
+                <div class="theatre-info">
+                    <img src="<%=recording.theatre.avatar%>" alt="" class="user-icon theatre-icon">
+                    <h3><%=recording.theatre.fullName%></h3>
+                </div>
+            </div>
+        </div>
+    <%- include("content-footer.ejs"); %>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/scripts/gallery.js"></script>
+</body>
+</html>

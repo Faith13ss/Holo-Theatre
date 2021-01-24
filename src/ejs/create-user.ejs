@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <%- include("base.ejs") %>
+
+    <link rel="stylesheet" href="styles/create-user.css">
+</head>
+<body>
+    <%- include("content-header.ejs", { selected: 'theatre' }); %>
+        <h1>Добавить пользователя</h1>
+        <hr>
+        <form class="adduser" action="user-ticket" method="post">
+            <input class="adduser-input" type="text" name="fullName" placeholder="Фамилия Имя...">
+            <input class="adduser-submit button" type="submit" value="Создать">
+        </form>
+    <%- include("content-footer.ejs") %>
+</body>
+</html>

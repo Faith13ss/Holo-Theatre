@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <%- include("base.ejs") %>
+
+    <link rel="stylesheet" href="styles/user-ticket.css">
+</head>
+<body>
+    <div class="ticket">
+        <h1>Здравствуйте, <%=user.fullName%>!</h1>
+        <p>Для пользования VR-театром перейдите по ссылке: http://xyu.ru</p>
+        <p>
+            Ваш логин: <b><%=login%></b><br>
+            Ваш пароль: <b><%=user.password%></b><br>
+        </p>
+        <h3>Приятного Вам просмотра!</h3>
+    </div>
+</body>
+</html>

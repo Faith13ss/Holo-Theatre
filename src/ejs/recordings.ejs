@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <%- include("base.ejs"); %>
+    
+    <link rel="stylesheet" href="styles/recordings.css">
+</head>
+<body>
+
+    <%- include("content-header.ejs", {selected: 'recordings'}); %>
+
+        <h1 class="welcome">Записи опер:</h1>
+        <div class="recordings">
+            <% for(const [id, recording] of Object.entries(recordings)) { %>
+                <a class="recording" href="watch-recording/<%=id %>">
+                    <div class="recording-preview" style="background-image: url('<%=recording.preview;%>')">
+                        <%-recording.description %>
+                    </div>
+                    <!-- <img src="<%=recording.preview %>" alt="" class="recording-preview"></img> -->
+                    <div class="recording-text">
+                        <span class="recording-title"><%=recording.name %></span>
+                    </div>
+                </a>
+            <% }; %>
+        </div>
+    <%- include("content-footer.ejs"); %>
+
+</body>
+</html>
